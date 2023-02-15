@@ -26,3 +26,29 @@ function resultNum(marks,number) {
   }
 }
 console.log(resultNum(67,60));
+
+for (let i = 13; i <= 25; i++) {
+  console.log(i);
+}
+
+for (let i = 2; i <= 12; i += 3) {
+  if (i === 10) {
+    break;
+  }
+  console.log(i);
+} 
+
+const arr = ['orange', 'apple', 'banana', 'pinapple'];
+for ( let i = 0; i <= arr.length; i++)
+console.log(arr[i])
+
+const shoppingList = {
+  1: "cloth",
+  2: "shoes",
+  3: "coat",
+  4: "bracelet",
+};
+
+for (let num in shoppingList ) {
+  console.log(num + ":" + shoppingList[num]);
+}  
