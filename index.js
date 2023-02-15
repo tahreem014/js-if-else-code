@@ -1,13 +1,13 @@
 
 
-// let strength = 50;
-// const totalStrength = 50;
-// if ( totalStrength == strength ) {
-//    console.log("all present");
-//  }
-// else {
-//   console.log("some are absent");
-// } 
+let strength = 50;
+const totalStrength = 50;
+if ( totalStrength == strength ) {
+   console.log("all present");
+ }
+else {
+  console.log("some are absent");
+} 
 
 function resultNum(marks,number) {
   console.log(number);
