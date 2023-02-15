@@ -52,3 +52,9 @@ const shoppingList = {
 for (let num in shoppingList ) {
   console.log(num + ":" + shoppingList[num]);
 }  
+
+const array = [1, 2, 3, 4, 5, 6];
+for (const i in array) {
+  console.log(i);
+}
+
