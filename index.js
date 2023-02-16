@@ -57,27 +57,81 @@
 //   console.log(i);
 // }
 
-const abc = ['orange', 'apple', 'mango', 'pinapple'];
-let x = "";
-for (let z of abc) {
-  console.log(x =  z);
+// const abc = ['orange', 'apple', 'mango', 'pinapple'];
+// let x = "";
+// for (let z of abc) {
+//   console.log(x =  z);
+// }
+
+// const name = 'Tahrem';
+// const age = 19;
+// //  console.log(`My name is ${name} and I am ${age}`);
+//  const hello = `My name is ${name} and I am ${age}`;
+//  console.log(hello);
+
+//  console.log(hello.length);
+
+//  const fruits = ['orange', 'apple', 'banana', 'mango', 'pinapple'];
+//   fruits[3] = 'orange';
+//   fruits.push('apple');
+//   fruits.unshift('pinapple');
+//   fruits.pop('banana');
+
+//   console.log(Array.isArray(fruits));
+//   console.log(fruits.indexOf('pinapple'));
+//   console.log(fruits);
+
+const person = {
+  firstName: 'Tahrem',
+  lastName: 'Nisa',
+  age: 20,
+  hobbies: ['sleeping', 'drama', 'eating',],
+  address: {
+    street: 70,
+    city: 'islamabad'
+  }
+}
+// console.log(person);
+// console.log(person.firstName, person.lastName);
+// console.log(person.hobbies[2]);
+// console.log(person.address.city);
+
+let i = 2;
+while (i <= 12) {
+  //console.log(i);
+  i++;
 }
 
-const name = 'Tahrem';
-const age = 19;
-//  console.log(`My name is ${name} and I am ${age}`);
- const hello = `My name is ${name} and I am ${age}`;
- console.log(hello);
+const todos = [
+  {
+    id:1,
+    text:'take a trash out'
+  },
+  {
+    id:2,
+    text:'Meeting a boss'
+  },
+  {
+    id:3,
+    text:'enjoying'
+  }
+]
+for(let todo of todos) {
+  console.log(todo.text);
+}
 
- console.log(hello.length);
+todos.forEach(function(todo) {
+   console.log(todo.text);
+ });
 
- const fruits = ['orange', 'apple', 'banana', 'mango', 'pinapple'];
-  fruits[3] = 'orange';
-  fruits.push('apple');
-  fruits.unshift('pinapple');
-  fruits.pop('banana');
+const todoText = todos.map(function(todo) {
+  return todo.text;
+ });
+ console.log(todoText);
 
-  console.log(Array.isArray(fruits));
-  console.log(fruits.indexOf('pinapple'));
-  console.log(fruits);
-
+const todoId = todos.filter(function(todo) {
+  return todo.id;
+}).map(function(todo) {
+  return todo.text;
+})
+console.log(todoId);
