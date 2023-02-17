@@ -81,57 +81,105 @@
 //   console.log(fruits.indexOf('pinapple'));
 //   console.log(fruits);
 
-const person = {
-  firstName: 'Tahrem',
-  lastName: 'Nisa',
-  age: 20,
-  hobbies: ['sleeping', 'drama', 'eating',],
-  address: {
-    street: 70,
-    city: 'islamabad'
-  }
-}
+// const person = {
+//   firstName: 'Tahrem',
+//   lastName: 'Nisa',
+//   age: 20,
+//   hobbies: ['sleeping', 'drama', 'eating',],
+//   address: {
+//     street: 70,
+//     city: 'islamabad'
+//   }
+// }
 // console.log(person);
 // console.log(person.firstName, person.lastName);
 // console.log(person.hobbies[2]);
 // console.log(person.address.city);
 
-let i = 2;
-while (i <= 12) {
-  //console.log(i);
-  i++;
+// let i = 2;
+// while (i <= 12) {
+//   //console.log(i);
+//   i++;
+// }
+
+// const todos = [
+//   {
+//     id:1,
+//     text:'take a trash out'
+//   },
+//   {
+//     id:2,
+//     text:'Meeting a boss'
+//   },
+//   {
+//     id:3,
+//     text:'enjoying'
+//   }
+// ]
+// for(let todo of todos) {
+//   console.log(todo.text);
+// }
+
+// todos.forEach(function(todo) {
+//    console.log(todo.text);
+//  });
+
+// const todoText = todos.map(function(todo) {
+//   return todo.text;
+//  });
+//  console.log(todoText);
+
+// const todoId = todos.filter(function(todo) {
+//   return todo.id;
+// }).map(function(todo) {
+//   return todo.text;
+// })
+// console.log(todoId);
+
+// const student = 20;
+// if(student == 50) {
+//   console.log('present');
+// }
+// else{
+//   console.log('absent');
+// }
+
+const x = 7;
+const color = x > 10 ? 'red' : 'blue';
+
+switch(color) {
+    case 'red':
+     console.log('color is red');
+     break;
+     case 'blue':
+     console.log('color is blue');
+     break;
+     default:
+     console.log('color is not red or blue');
+     break;         
 }
 
-const todos = [
-  {
-    id:1,
-    text:'take a trash out'
-  },
-  {
-    id:2,
-    text:'Meeting a boss'
-  },
-  {
-    id:3,
-    text:'enjoying'
-  }
-]
-for(let todo of todos) {
-  console.log(todo.text);
+function addNum(num1, num2) {
+    return num1 + num2;
 }
+console.log(addNum(34, 25));
 
-todos.forEach(function(todo) {
-   console.log(todo.text);
- });
+const addNum = (num1, num2) => console.log(num1 + num2);
+addNum(44, 77);
 
-const todoText = todos.map(function(todo) {
-  return todo.text;
- });
- console.log(todoText);
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+}
+Person.prototype.getBirthYear = function() {
+    return this.dob.getFullYear();
+}
+Person.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`;
+}
+const person1 = new Person('john', 'doe', '4-3-1980');
+const person2 = new Person('mary', 'smith', '3-6-1999');
 
-const todoId = todos.filter(function(todo) {
-  return todo.id;
-}).map(function(todo) {
-  return todo.text;
-})
-console.log(todoId);
+console.log(person2.getFullName());
+console.log(person1.getFullName());
