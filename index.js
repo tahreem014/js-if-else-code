@@ -144,42 +144,97 @@
 //   console.log('absent');
 // }
 
-const x = 7;
-const color = x > 10 ? 'red' : 'blue';
+// const x = 7;
+// const color = x > 10 ? 'red' : 'blue';
 
-switch(color) {
-    case 'red':
-     console.log('color is red');
-     break;
-     case 'blue':
-     console.log('color is blue');
-     break;
-     default:
-     console.log('color is not red or blue');
-     break;         
-}
+// switch(color) {
+//     case 'red':
+//      console.log('color is red');
+//      break;
+//      case 'blue':
+//      console.log('color is blue');
+//      break;
+//      default:
+//      console.log('color is not red or blue');
+//      break;         
+// }
 
-function addNum(num1, num2) {
-    return num1 + num2;
-}
-console.log(addNum(34, 25));
+// function addNum(num1, num2) {
+//     return num1 + num2;
+// }
+// console.log(addNum(34, 25));
 
-const addNum = (num1, num2) => console.log(num1 + num2);
-addNum(44, 77);
+// const addNum = (num1, num2) => console.log(num1 + num2);
+// addNum(44, 77);
 
-function Person(firstName, lastName, dob) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.dob = new Date(dob);
-}
-Person.prototype.getBirthYear = function() {
-    return this.dob.getFullYear();
-}
-Person.prototype.getFullName = function() {
-    return `${this.firstName} ${this.lastName}`;
-}
-const person1 = new Person('john', 'doe', '4-3-1980');
-const person2 = new Person('mary', 'smith', '3-6-1999');
+// function Person(firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.dob = new Date(dob);
+// }
+// Person.prototype.getBirthYear = function() {
+//     return this.dob.getFullYear();
+// }
+// Person.prototype.getFullName = function() {
+//     return `${this.firstName} ${this.lastName}`;
+// }
 
-console.log(person2.getFullName());
-console.log(person1.getFullName());
+// class Person {
+//     constructor(firstName, lastName, dob) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.dob = new Date(dob); 
+//     }
+//     getBirthYear(){
+//         return this.dob.getFullYear();
+//     }
+//     getFullName(){
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+// const person1 = new Person('john', 'doe', '4-3-1980');
+// const person2 = new Person('mary', 'smith', '3-6-1999');
+
+// console.log(person2.getFullName());
+// console.log(person1.getFullName());
+
+class math {
+    constructor(value1, value2) {
+       this.value1 = value1;
+       this.value2 = value2;
+    }
+    getSum(){
+        return this.value1 + this.value2;
+    }
+    getMinus(){
+        return this.value1 - this.value2;
+    }
+}
+const sumOf2 = new math (30,6);
+const minusOf2 = new math (34,56);
+
+console.log(sumOf2.getSum());
+console.log(minusOf2.getMinus());
+
+class car {
+    constructor(color, engine, race) {
+        this.color = color;
+        this.engine = engine;
+        this.race = race;
+    }
+    getColor(){
+        return this.color;
+    }
+    getEngineSize(){
+        return this.engine;
+    }
+    getRace(){
+        return this.race;
+    }
+}
+const cultus = new car('red', 45, 'go Forward');
+
+
+console.log(cultus.getColor());
+console.log(cultus.getEngineSize());
+console.log(cultus.getRace());
